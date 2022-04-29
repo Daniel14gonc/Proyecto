@@ -2,28 +2,34 @@ const path = require('path')
 const webpackNodeExternals = require('webpack-node-externals')
 
 module.exports = {
-  // (2)
   target: 'node',
-  // (3)
-  entry: ['@babel/polyfill', './src/server.js'],
-  // (4)
+  entry: ['./server/index.jsx'],
   externals: [webpackNodeExternals()],
   output: {
-    filename: 'bundle.js',
-    // (5)
-    path: path.resolve(__dirname, './build'),
+    filename: 'bundle.jsx',
+    path: path.resolve(__dirname, './server'),
   },
   module: {
     rules: [
       {
-        test: /.js$/,
-        use: {
-          loader: 'babel-loader',
-          options: {
-            presets: ['@babel/preset-react', '@babel/preset-env'],
-          },
-        },
+        test: /\.jsx$/,
+        exclude: /node_modules/,
+        use: [
+          { loader: 'babel-loader' },
+        ],
+      },
+      {
+        test: /\.(png|jpg|gif|svg|jpeg)$/,
+        type: 'asset/resource',
+      },
+      {
+        test: /\.mp3$/,
+        use: [{ loader: 'file-loader' }],
+      },
+      {
+        test: /\.css$/,
+        use: ['file-loader'],
       },
     ],
   },
-};
+}

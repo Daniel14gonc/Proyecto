@@ -2,7 +2,7 @@ module.exports = {
   target: 'web',
   mode: 'development',
   devtool: 'source-map',
-  entry: './src/index.js',
+  entry: './src/index.jsx',
   output: {
     filename: 'bundle.js',
   },
@@ -16,7 +16,7 @@ module.exports = {
   module: {
     rules: [
       {
-        test: /\.js$/,
+        test: /\.jsx$/,
         exclude: /node_modules/,
         use: [
           { loader: 'babel-loader' },

@@ -6,7 +6,10 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "babel-node ./server/index.jsx",
-    "build": "webpack"
+    "build": "webpack",
+    "build-server": "webpack --config webpack.server.js",
+    "dev-server": "node ./server/bundle.jsx",
+    "all": "npm run build && npm run build-server && npm run dev-server"
   },
   "author": "",
   "license": "ISC",
@@ -28,7 +31,8 @@
     "style-loader": "^3.3.1",
     "webpack": "^5.72.0",
     "webpack-cli": "^4.9.2",
-    "webpack-dev-server": "^4.8.1"
+    "webpack-dev-server": "^4.8.1",
+    "webpack-node-externals": "^3.0.0"
   },
   "devDependencies": {
     "eslint": "^8.14.0",

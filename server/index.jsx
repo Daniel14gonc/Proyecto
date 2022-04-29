@@ -3,9 +3,10 @@ import path from 'path'
 import React from 'react'
 import * as ReactDOMServer from 'react-dom/server'
 import express from 'express'
-import App from '../src/App'
 
-const PORT = process.env.PORT || 3000;
+import App from '../src/App.jsx'
+
+const PORT = process.env.PORT || 3000
 const app = express()
 
 app.get('/', (req, res) => {
@@ -14,7 +15,6 @@ app.get('/', (req, res) => {
     <html lang="en">
     <head>
         <title>Document</title>
-        <link rel="stylesheet" type="text/css" href="/styles.css" />
     </head>
     <body style="margin: 0px;">
         <div id="root">${element}</div>
@@ -22,7 +22,6 @@ app.get('/', (req, res) => {
     </body>
     </html>
   `
-
   res.send(html)
 })
 
