@@ -16,7 +16,7 @@ app.get('/', (req, res) => {
     <head>
         <title>Document</title>
     </head>
-    <body style="margin: 0px;">
+    <body "margin: 0px;padding: 0px;width: 100vw; overflow-x: hidden;">
         <div id="root">${element}</div>
         <script src="/bundle.js"></script>
     </body>

@@ -12,18 +12,18 @@ module.exports = {
   module: {
     rules: [
       {
-        test: /\.jsx$/,
+        test: /\.jsx?$/,
         exclude: /node_modules/,
         use: [
           { loader: 'babel-loader' },
         ],
       },
       {
-        test: /\.(png|jpg|gif|svg|jpeg)$/,
+        test: /\.(png|jpg|gif|svg|jpeg|JPG)$/,
         type: 'asset/resource',
       },
       {
-        test: /\.mp3$/,
+        test: /\.(mp3|mp4)$/,
         use: [{ loader: 'file-loader' }],
       },
       {

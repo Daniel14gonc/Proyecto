@@ -1,0 +1,27 @@
+.first-text-container {
+    display: flex;
+    flex-direction: column;
+    margin-left: 13%;
+    margin-top: 5%;
+}
+
+
+.header {
+    font-family: "Montserrat", "Verdana", "sans-serif";
+    font-weight: lighter;
+    font-size: 18px;
+    letter-spacing: 3px;
+}
+
+.first-text-container > p {
+    font-family: "EB Garamond","Georgia","Times New Roman","serif";
+    color: #909090;
+    font-size: 40px;
+    font-weight: lighter;
+    line-height: 80px;
+    margin-top: 3px;  
+}
+
+.first-text-container > p > u {
+    color: black;
+}

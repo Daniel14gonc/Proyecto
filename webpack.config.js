@@ -12,6 +12,7 @@ module.exports = {
     },
     compress: true,
     port: 9000,
+    historyApiFallback: true,
   },
   module: {
     rules: [
@@ -23,11 +24,11 @@ module.exports = {
         ],
       },
       {
-        test: /\.(png|jpg|gif|svg|jpeg)$/,
+        test: /\.(png|jpg|gif|svg|jpeg|JPG)$/,
         type: 'asset/resource',
       },
       {
-        test: /\.mp3$/,
+        test: /\.(mp3|mp4)$/,
         use: [{ loader: 'file-loader' }],
       },
       {
