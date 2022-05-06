@@ -4,6 +4,7 @@ import Video from './Video.jsx'
 import FirstSection from './FirstSection.jsx'
 import Parallax from './Parallax.jsx'
 import './App.css'
+import SecondSection from './SecondSection.jsx'
 
 const App = () => (
   <div className="container">
@@ -11,7 +12,7 @@ const App = () => (
     <Video />
     <FirstSection />
     <Parallax />
-    <div style={{height:'600px', width:'100%', backgroundColor:'white'}}/>
+    <SecondSection />
   </div>
 )
 

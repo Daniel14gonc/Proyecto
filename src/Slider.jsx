@@ -1,4 +1,4 @@
-import React, { useRef, useState } from 'react'
+import React, { useState } from 'react'
 import PropTypes from 'prop-types'
 import './Slider.css'
 import right from '../assets/right.svg'
@@ -9,9 +9,13 @@ import slide3 from '../assets/slide3.JPG'
 import slide4 from '../assets/slide4.JPG'
 import slide5 from '../assets/slide5.JPG'
 
-const Slide = ({ background }) => (
-  <div className="slide" style={{ backgroundImage: `url(${background})` }}>
-    <div />
+const Slide = ({ element }) => (
+  <div className="slide" style={{ backgroundImage: `url(${element.background})` }}>
+    <div>
+      <h3>{element.title}</h3>
+      <p>{element.content}</p>
+      <p>{element.footer}</p>
+    </div>
   </div>
 )
 
@@ -59,16 +63,28 @@ const Controlls = ({ change, position }) => {
 const Slider = ({ data }) => {
   // Se crea un estado para manejar la posicion del slider
   const [slidePosition, setSlidePosition] = useState(0)
-  const slides = [slide1, slide2, slide3, slide4, slide5]
+  const slides = [{
+    background: slide1, title: 'EXPOSICIÓN', content: 'FARAÓN DE LAS DOS TIERRAS', footer: 'La epopeya afriaca de los reyes de Napata. Del 28 de abril al 25 de julio de 2022',
+  },
+  {
+    background: slide2, title: 'EXPOSICIÓN', content: 'GIORGIO VASARI', footer: 'El libro de los dibujos. Del 31 de marzo al 18 de julio de 2022',
+  },
+  {
+    background: slide3, title: 'EXPOSICIÓN', content: 'YVES SAINT LAURENT DESFILA EN EL LOUVRE', footer: 'Del 22 de enero de 2022 al 15 de mayo de 2022',
+  },
+  {
+    background: slide4, title: 'EXPOSICIÓN', content: 'DELACROIX Y LA NATURALEZA', footer: 'En el Museo Nacional Eugène Delacroix del 16 de marzon al 27 de junio de 2022',
+  },
+  {
+    background: slide5, title: 'EVENTO', content: 'PEDRO CABRITA REIS, LAS TRES GRACIAS, 2022', footer: 'Una obra monumental en el jardín de las Tullerías',
+  }]
 
-  // Datos de prueba
-  const data1 = [1, 2, 3, 4, 5]
   return (
     <>
       <div className="slideContainer">
         <div className="otro" style={{ transform: `translate(${slidePosition}px)`, transition: '700ms ease-out all' }}>
           {slides.map((e, index) => (
-            <Slide key={index.id} background={e} />
+            <Slide key={index.id} element={e} />
           ))}
         </div>
       </div>
@@ -96,7 +112,7 @@ Controlls.propTypes = {
 }
 
 Slide.propTypes = {
-  background: PropTypes.string.isRequired,
+  element: PropTypes.string.isRequired,
 }
 
 export default Slider
