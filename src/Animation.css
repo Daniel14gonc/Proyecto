@@ -1,0 +1,117 @@
+.animation-cont {
+    background-color: black;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 1680px;
+    color: white;
+    overflow-y: hidden;
+}
+
+.animation-cont > h1 {
+    color: white;
+    font-family: LouvreSerif, Georgia, Times New Roman, Times, serif;
+    font-size: 55px;
+    font-weight: 400;
+    max-width: 800px;
+    margin-left: 200px;
+    margin-top: 100px;
+    align-self: flex-start;
+}
+
+.images {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 20px;
+    width: 85vw;
+    margin-top: 30px;
+    position: relative;  
+}
+
+.image-anim {
+    background-color: white;
+    height: 200px;
+    width: 100%;
+    position: relative;
+    margin-bottom: 50px;
+    transform: translateY(50px);
+    visibility: hidden;
+    background-size: contain;
+    background-size: 110%;
+    background-position: center;
+    background-repeat: no-repeat;
+    opacity: 0;
+}
+
+.image-anim1 {
+    background-color: white;
+    height: 200px;
+    width: 100%;
+    position: relative;
+    transition: 700ms ease-in-out;
+    margin-bottom: 30px;
+    background-size: 110%;
+    background-position: center;
+    background-repeat: no-repeat;
+    opacity: 1;
+}
+
+.images > div:nth-of-type(1) {
+    margin-top: 40px;
+}
+
+.images > div:nth-of-type(3) {
+    margin-top: 20px;
+}
+
+.prueba {
+    margin-top: 300px;
+    height: 600px;
+    width: 100px;
+    background-color: white;
+    transition: 100ms ease-in;
+    transform: translateY(100px);
+    visibility: hidden;
+}
+
+.prueba1 {
+    margin-top: 300px;
+    height: 600px;
+    width: 100px;
+    background-color: white;
+    visibility: visible;
+}
+
+.bottom {
+    width: 100%;
+    background-image: linear-gradient(to top, rgb(0,0,0,0.8), transparent);
+    height: 500px;
+    position: absolute;
+    bottom: 170px;
+    display: flex;
+    justify-content: center;
+    transition: 0ms ease-in;
+    align-items: flex-end;
+    transform: translateY(0px);
+}
+
+.bottom > div {
+    margin-bottom: 120px;
+    padding: 15px;
+    color: black;
+    border-radius: 23px;
+    padding-left: 25px;
+    padding-right: 25px;
+    background-color: white;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 16px;
+    font-weight: normal;
+    letter-spacing: -1px;
+    cursor: pointer;
+}
+
+.bottom >div:hover {
+    text-decoration: underline;
+    background-color: rgb(196, 196, 196 );
+}

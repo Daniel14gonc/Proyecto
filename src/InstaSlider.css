@@ -1,0 +1,79 @@
+.insta-cont {
+    margin-left: 0px;
+}
+
+.insta-header {
+    height: 70px;
+    width: 330px;
+    background-color: #222;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.profile {
+    display: flex;
+    align-items: center;
+}
+
+.profile > div {
+    background-image: url(https://api-www.louvre.fr/sites/default/files/instagram_profile/17841401007524190.jpg);
+    height: 50px;
+    width: 50px;
+    border-radius: 100%;
+    margin-left: 20px;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.insta-header > p {
+    margin-right: 20px;
+    color: #c6c6c6;
+    font-family: Roboto;
+    font-size: 12px;
+}
+
+.profile > h3 {
+    color: white;
+    font-family: Roboto;
+    font-size: 15px;
+    margin-left: 20px;
+}
+
+.insta-image {
+    width: 330px;
+    background-size: 100%;
+    background-repeat: no-repeat;
+}
+
+.insta-slide {
+    margin-left: 40px;
+}
+
+.insta-footer {
+    height: 70px;
+    width: 330px;
+    padding-bottom: 25px;
+    padding-top: 25px;
+    background-color: #222;
+    display: flex;
+    flex-direction: column;
+}
+
+.insta-footer > p:nth-of-type(1) {
+    margin-top: 10px;
+    color: white;
+    font-family: Roboto;
+    font-size: 14px;
+    margin-left: 30px;
+}
+
+.insta-footer > p:nth-of-type(2), .insta-footer > p:nth-of-type(3) {
+    margin-top: -9px;
+    max-width: 300px;
+    height: 100px;
+    color: white;
+    font-family: Roboto;
+    font-size: 14px;
+    margin-left: 30px;
+}
