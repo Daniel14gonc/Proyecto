@@ -29,6 +29,7 @@
 
 .footer > p {
     max-width: 500px;
+    cursor: pointer;
 }
 
 .footer > p:hover {

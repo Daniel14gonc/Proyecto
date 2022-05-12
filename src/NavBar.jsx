@@ -7,6 +7,7 @@ const Upper = () => (
       <div className="menuImage" />
       <div className="titles">Menú</div>
       <div className="titles">Español</div>
+      <div className="pest" />
     </div>
     <div>
       <div className="logo" />

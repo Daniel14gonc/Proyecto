@@ -110,6 +110,12 @@
     margin-top: 2px;
     margin-left: 29%;
     margin-right: 3.5%;
+    cursor: pointer;
+}
+
+.button1:hover {
+    border-width: thin;
+    border-color: white;
 }
 
 .button2 {
@@ -122,6 +128,27 @@
     position: relative;
     margin-top: 3px;
     background-color: #008573;
+    cursor: pointer;
+}
+
+.pest {
+    height: 30px;
+    width: 30px;
+    background-image: url(/assets/pest.svg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    filter: invert(100%) sepia(0%) saturate(5429%) hue-rotate(287deg) brightness(126%) contrast(107%);
+    margin-top: 11px;
+    margin-left: 5px;
+    cursor: pointer;
+}
+
+.button2:hover {
+    background-color: #004b41;
+}
+
+.button2 > div:hover {
+    text-decoration: underline;
 }
 
 .shop {

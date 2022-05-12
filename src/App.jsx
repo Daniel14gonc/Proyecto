@@ -8,6 +8,7 @@ import SecondSection from './SecondSection.jsx'
 import Animation from './Animation.jsx'
 import ToWatch from './ToWatch.jsx'
 import Last from './Last.jsx'
+import Footer from './Footer.jsx'
 
 const App = () => {
   let prevScrollpos = window.pageYOffset
@@ -34,6 +35,7 @@ const App = () => {
       <Animation />
       <ToWatch />
       <Last />
+      <Footer />
     </div>
   )
 }
