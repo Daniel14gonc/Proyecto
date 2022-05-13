@@ -30,7 +30,7 @@ const Image = ({ element }) => {
     <div
       ref={containerRef}
       className={`${isVisible ? 'image-anim1' : 'image-anim'}`}
-      style={{ backgroundImage: `url(${element.image}`, height: element.height }}
+      style={{ backgroundImage: `url(${element.image})`, height: element.height }}
     />
   )
 }

@@ -26,6 +26,8 @@ Si quieres construir el sitio localmente.
 4. Ejecuta el comando `npm run all`.
 5. Dirigete a `http://localhost:3000` donde podrás ver el proyecto.
 
+Puedes visitar el sitio en: `http://proyecto.danielgcarrillo.xyz`
+
 ## Comandos
 - `dev` permite crear el sitio usando solo babel, pero sin cargar imágenes ni estilos.
 - `build` permite construir el sitio, sin necesidad de usar un servidor.

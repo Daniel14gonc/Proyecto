@@ -106,7 +106,7 @@ Controlls.propTypes = {
 }
 
 Slide.propTypes = {
-  element: PropTypes.string.isRequired,
+  element: PropTypes.instanceOf(Object).isRequired,
 }
 
 export default FirstSlider

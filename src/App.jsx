@@ -11,9 +11,9 @@ import Last from './Last.jsx'
 import Footer from './Footer.jsx'
 
 const App = () => {
-  let prevScrollpos = window.pageYOffset
-  window.onscroll = () => {
-    const currentScrollPos = window.pageYOffset
+  let prevScrollpos = global.pageYOffset
+  global.onscroll = () => {
+    const currentScrollPos = global.pageYOffset
     document.querySelector('.navContainer').style.transition = '800ms'
     if (prevScrollpos > currentScrollPos) {
       document.querySelector('.navContainer').style.top = '0'
